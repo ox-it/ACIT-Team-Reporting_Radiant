@@ -1,0 +1,13 @@
+# Ignore RProject files
+*.Rproj.user
+*.Rhistory
+*.RData
+
+# CSV files
+*.csv
+
+#Ignore all xlsx files
+*.xlsx
+*.xls
+
+.Rproj.user
