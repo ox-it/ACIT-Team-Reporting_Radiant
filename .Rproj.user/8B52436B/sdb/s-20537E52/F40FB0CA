@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(pushoverr) # http://www.r-bloggers.com/creating-reproducible-software-environments-with-packrat/\nlibrary(googlesheets)\nlibrary(DT)\nlibrary(DiagrammeR)\nlibrary(NeuralNetTools)\nlibrary(radiant)\nlibrary(shinyAce)\n\n\nshinyServer(function(input, output, session) {\n  \n  ## Load googlesheet\n  source(file = \"data-processing.R\", local = TRUE)\n\n  ## source shared functions\n\tsource(\"init.R\", encoding = r_encoding, local = TRUE)\n\tsource(\"radiant.R\", encoding = r_encoding, local = TRUE)\n\n# \t## for shiny-server\n#  \tif (!\"package:radiant\" %in% search()) {\n#  \t\tif (r_path == \"..\") {\n#       for (file in list.files(\"../../R\",\n# \t\t      pattern=\"\\\\.(r|R)$\",\n# \t\t      full.names = TRUE)) {\n# \n# \t\t  \tsource(file, encoding = r_encoding, local = TRUE)\n# \t\t  }\n# \t\t} else {\n# \t\t\tradiant::copy_all(radiant)\n#       set_class <- radiant::set_class\n# \t\t}\n# \t} else {\n#     # environment(radiant) <- environment()\n# \t  # copy_from(radiant, state_init, state_single, state_multiple)\n# \t}\n\n\t## source data & analysis tools\n  for (file in list.files(c(\"tools/app\",\"tools/data\"),\n      pattern=\"\\\\.(r|R)$\",\n      full.names = TRUE)) {\n\n  \tsource(file, encoding = r_encoding, local = TRUE)\n  }\n\n  ## save state on refresh or browser close\n  saveStateOnRefresh(session)\n})\n",
+    "created" : 1460621175530.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "185456186",
+    "id" : "F40FB0CA",
+    "lastKnownWriteTime" : 1460623818,
+    "last_content_update" : 1460623818645,
+    "path" : "~/Github/ACIT-Team-Reporting_Radiant/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

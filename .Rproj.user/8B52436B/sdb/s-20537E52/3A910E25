@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shinyapps)\ndeployApp(appName = \"ACIT-Team-Reporting_Radiant\")\n",
+    "created" : 1460621506514.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2720946437",
+    "id" : "3A910E25",
+    "lastKnownWriteTime" : 3270022764408340486,
+    "last_content_update" : 1460623707274,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

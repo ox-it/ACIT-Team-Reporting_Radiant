@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "help_menu <-\n  tagList(\n    navbarMenu(\"\", icon = icon(\"question-circle\"),\n      tabPanel(\"Help\", uiOutput(\"help_base\"), icon = icon(\"question\")),\n      tabPanel(\"Videos\", uiOutput(\"help_videos\"), icon = icon(\"film\")),\n      tabPanel(\"About\", uiOutput(\"help_about\"), icon = icon(\"info\")),\n      tabPanel(tags$a(\"\", href = \"http://vnijs.github.io/radiant/\", target = \"_blank\",\n               list(icon(\"globe\"), \"Radiant docs\"))),\n      tabPanel(tags$a(\"\", href = \"https://github.com/vnijs/radiant/issues\", target = \"_blank\",\n               list(icon(\"github\"), \"Report issue\")))\n    ),\n    js_head\n  )\n\n## ui for base radiant\nshinyUI(\n  navbarPage(\n    \"ACIT Team Reporting Analysis\",\n    tabPanel(\"Radiant App\",\n             do.call(navbarPage, c(\"Radiant\", nav_ui, shared_ui, help_menu))\n             ),\n    tabPanel(\"About this tool\",\n             fluidPage(\n               \"About\"\n             ))\n    \n  )\n  \n)\n",
+    "created" : 1460621489694.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2922644257",
+    "id" : "F9ADC816",
+    "lastKnownWriteTime" : 1460621733,
+    "last_content_update" : 1460621733758,
+    "path" : "~/Github/ACIT-Team-Reporting_Radiant/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
