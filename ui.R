@@ -21,7 +21,22 @@ shinyUI(
              ),
     tabPanel("About this tool",
              fluidPage(
-               "About"
+               HTML(
+                 paste0("<p>",
+                        "This tool uses ",
+                        "<a href='http://vnijs.github.io/radiant/'>Radiant</a>",
+                        " to provide an interactive tool for exploring the outreach and impact of Oxford University's Academic IT Team (ACIT)",
+                        "</p>",
+                        "<p>",
+                        "Data is collected from ACIT team members through a Google Form and made available in this interactive applications through the use of the ",
+                        "<a href='http://www.shinyapps.io'>shinyapps.io</a>",
+                        " service.",
+                        "</p>",
+                        "<p>",
+                        "If you have any questions about this tool please email martin.hadley(at)it.ox.ac.uk",
+                        "</p>"
+                 )
+               )
              ))
     
   )
